@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <title>Agência VaiComFé</title>
+      
+   </head>
+
+   <body>
+      <h1>Sorteio</h1>
+      <p>Número de cupons e local</p>
+      <script>
+      
+        'use strict'; // Modo chato do JS
+        
+        let signos= [];
+        let idade;
+        let signoIn;
+        let cupons;
+
+        signos.splice(0, 0,"AQUÁRIO", "GÊMEOS", "LIBRA");
+        signos.splice(2, 0, "PEIXES", "CÂNCER", "ESCORPIÃO");
+        signos.splice(4, 0, "ARÍES", "LEÃO", "SAGITÁRIO");
+        signos.splice(6, 0, "TOURO", "VIRGEM", "CAPRICÓRNIO");
+
+       do{
+           idade = parseInt(prompt("Informa sua idade em anos"));
+       } while (!Number.isInteger(idade) || idade<18 || idade>120); //(isNaN(idade) ...)
+       
+       do{
+           signoIn = prompt("Informe seu signo em maiúsculas");
+       } while (signos.indexOf(signoIn) == -1);
+
+       cupons = (idade >= 60) ? "dois cupons" : "um cupom";
+
+       switch (signoIn) {
+
+           case "AQUÁRIO":
+           case "GÊMEOS":
+           case "LIBRA":
+               document.write(`Você terá direito a ${cupons} concorrendo para Salvador/BA.`);
+               break;
+
+           case "PEIXES":
+           case "CÂNCER":
+           case "ESCORPIÃO":
+               document.write(`Você terá direito a ${cupons} concorrendo para Maceió/AL.`);
+               break;
+
+           case "ARÍES":
+           case "LEÃO":
+           case "SAGITÁRIO":
+               document.write(`Você terá direito a ${ cupons} concorrendo para Natal/RN.`);
+               break;
+
+           case "TOURO":
+           case "VIRGEM":
+           case "CAPRICÓRNIO":
+               document.write(`Você terá direito a ${cupons} concorrendo para Fortaleza/CE.`);
+               break;
+
+       }
+
+     </script>
+   </body>
+</html>

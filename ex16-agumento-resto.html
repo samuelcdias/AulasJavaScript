@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            /*
+            Escreva uma função que receba um argumento booleano e 
+            um argumento de resto.
+            Se o primeiro argumento for true, os números do argumento
+            de resto serão multiplicados entre si.
+            Caso contrário, os números do argumento de resto deverão
+            ser somados.
+            Retorne o resultado.
+         */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+
+            function fun(multiplicar, ... nums){
+                let res;
+
+                if (multiplicar) {
+                    for (let i = 1; i< nums.length; i++) {
+                        res = res*nums[i];
+                    }
+                } else {
+                    for (let i= 0; i< nums.length; i++){
+                        res += nums[i];
+                    }
+                }
+
+                return res;
+            }
+
+        </script>
+    </body>
+</html>

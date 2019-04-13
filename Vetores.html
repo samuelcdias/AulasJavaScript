@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            //alert('Hello, world!');
+            //document.write('Hello, world!');
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Vetores</h1>
+        <p>Vetor é um - subtipo de dado - (tipo: object) que comporta vários valoresm acessíveis por meio de sua posição dentro do conjunto.</p>
+        <br>
+        <p><b>1</b> - Vetores em JS <u>não têm</u> tamanho predefinido. <br> Como declarar um <u>vetor vazio</u> em JS</p>
+        <h6> let vet1 = Array(); // Forma antiga</h6>
+        <h6> let vet2 = []; // Forma nova</h6>
+        
+        <p> Como delcarar vetor <u>com conteúdo</u>:</p>
+        <h6> let vet3 = Array(44, 'Banana', true, undefined); //Antiga</h6>
+        <h6> let vet4 = [44, 'Banana', true, undefined]; //Nova</h6>
+        
+        <p><b>2</b> - Diferentes tipos de dados podem ser colocados dentro do mesmo vetor.</p>
+        <p><b>3</b> - <u>TODOS</u> os vetores têm suas posições iniciadas em 0 (zero).</p>
+        <h5>vet3</h5>
+        <h4> &nbsp;&nbsp;44 | 'Banana' | true | undefined </h4>
+        <h4>.. 0..| ........1......| ...2...|.......3....</h4>
+        <h6> alert(vet3[0]);</h6></fontcolor>
+        
+        <p> Adicionando um valor a um vetor.</p>
+        <p> push() => adiciona um valor ao <u>final</u> do vetor.</p>
+        <h6>vet2.push('Oi'); // Coloca o valor 'Oi' na pos. 0</h6>
+        <h6>vet4.push('Oi'); // Coloca o valor 'Oi' na pos. 4</h6>
+
+        <p>Descobrindo quantos elementos há em um vetor: <b>leng</b>th</p>
+        <h6>
+                vet1.length // 0 <br>
+                vet2.length // 1 <br>
+                vet3.length // 4 <br>
+                vet4. length // 5
+        </h6>
+        <h4> FIFO First In, First Out  <b> Fila</b>
+        <h4> FILO  First in, Last Out  <b> Pilha</b>
+        <br>
+        
+
+
+        <p>Percorrendo o vetor.</p>
+        <h6> 
+            for (let x = 0; x < vet3.length; x++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; document.write(vet3[x]);<br>
+            }<br>
+        </h6>
+        <p>Retirando elementos do <u>final</u> do vetor: <b>pop()</b></p>
+        <h6>
+             let val = vet3.pop();<br>
+            /*<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;val passa a conter undefined e <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;vet3 passa a ter 3 elementos<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(<u>true</u> passa a ser o último)<br>
+            */
+        </h6>
+        <h6>
+            unshift().............................................................push()<br>
+            .......II<br>
+            .......V<br>
+           _________________________________________________<br>
+           |....................................V.E.T.O.R......................................| <br>
+           _________________________________________________<br>
+           ll.........................................ll..............................................ll<br>
+           => shift()............................=>splice()...............................=>pop()</h6>
+
+       <p>Pilha: coloco com push() e tiro com pop()<br>
+           Fila: coloco com push() e tiro com shift()</p>
+
+        <script>
+        
+        </script>
+    </body>
+</html>

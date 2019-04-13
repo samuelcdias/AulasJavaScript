@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <script>
+         
+            /*
+            Peça oa usuário para informar
+            dois números e um operador matemático
+            (+, -, * ou /). Exiba, com document.write,
+            o resultado da operação.
+            */
+
+            let a;
+            let b;
+            let op;
+
+            a = parseFloat(prompt("Digite um número"))
+            b = parseFloat(prompt("Digite outro numero"))
+            op = prompt("Digite um Operador matemático")
+        
+            if (op == "+"){
+                document.write(a + " + " + b + " = " + (a + b));
+            }
+            else if (op == "-"){
+                document.write(a + " - " + b + " = " + (a - b));
+            }
+            else if (op == "*"){
+                document.write(a + " * " + b + " = " + (a * b));
+            }
+            else if (op == "/"){
+                if(b == 0){
+                    alert("Erro! Divisão por zero não permitida!")
+                }
+                else{ 
+                    document.write(a + " / " + b + " = " + (a / b));
+                }
+            }
+            else{
+                document.write("You did it wrong!");
+            }
+      </script>
+    </body>
+</html>

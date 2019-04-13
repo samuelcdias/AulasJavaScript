@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            //alert('Hello, world!');
+            //document.write('Hello, world!');
+
+            /*
+                Problema: encontrar o maior número
+                abaixo de 100 que seja, ao mesmo tempo,
+                múltiplo de 17 e 29.
+            */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <script>
+        
+        let num = 1000;
+        /*
+        while (num> 0){
+            if (num % 17== 0 && num % 29 == 0){
+                break;
+            }
+            num--;
+        }
+        */
+        
+        for(num = 1000; num > 0; num--){
+            if(num % 17 == 0 && num % 29 == 0)
+                break;
+        }
+
+        alert(num);
+        </script>
+    </body>
+</html>

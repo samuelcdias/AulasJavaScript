@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            /*
+            Escreva um loop que retorne o resultado da divisão 
+            (com casas decimais) do número 99 de todos os 
+            números inteiros entre 10 e -10.
+            Lembrete: a divisão por 0 (zero) não pode ocorrer!
+            Implemente com o loop while e utilize continue dentro do loop.
+         */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+            let i = -11;
+
+            while (i <10){
+                i++;
+
+                if (i == 0){
+                    document.write('<br>');
+                    continue;
+                } else{
+                    document.write(`${99/i}<br>`);  
+                }
+            }
+        </script>
+    </body>
+</html>

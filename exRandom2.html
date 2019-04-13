@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            //alert('Hello, world!');
+            //document.write('Hello, world!');
+            
+            /*
+            Imprimir todos os números abaixo 
+            de 1000 que são múltiplos de 7.
+            */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+            for (let x =1; x <= 1000; x++){
+                if (x %7 ==0){
+                    document.write(`${x} `);
+                }
+            }
+
+            document.write("<br>")
+
+            for(let x = 1; x <= 1000; x++){
+                if(x % 7 != 0){
+                    continue;
+                }
+                document.write(`${x} `);
+            }
+
+        </script>
+    </body>
+</html>

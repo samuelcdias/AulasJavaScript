@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            /*
+            Escreva uma função que escreva na página com document.write()
+            todos os números entre 1 e um máximo passado como argumento.
+            Essa função não deve retornar valor.
+         */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+
+            function escreveNum(num) {
+                document.write("<br>1 ");
+                for (let i = 2; i<num; i++) {
+                    
+                    if ((i-1) % 10 == 0) {
+                        document.write(`<br> ${i}`);
+                    } else{
+                        document.write(`, ${i}`);
+                    }
+                }
+                document.write(`, ${num}.`);
+            }
+        
+        </script>
+    </body>
+</html>

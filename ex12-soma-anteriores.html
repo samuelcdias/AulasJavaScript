@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            /*
+            Peça para o usuário informar um número. Faça a validação do isNaN
+            como de costume.
+            Crie uma função que some todos os números de 1 até o número informado
+            pelo usuário e retorne o valor da soma.
+            Exiba o valor da soma, FORA da função.
+         */
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+            let num;
+
+            do{
+                num = prompt("Insira um número");
+            } while(isNaN(num));
+
+            function soma(num) {
+                let soma = 0;
+
+                for (let i; i<= num; i++) {
+                    soma = soma + i;
+                }
+
+                return soma;
+            }
+
+            document.write(soma(num));
+
+        </script>
+    </body>
+</html>

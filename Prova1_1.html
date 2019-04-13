@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf8">
+        <title>Página HTML</title>
+        <script>
+
+            'use strict';  // Modo chato do JS
+
+            //alert('Hello, world!');
+            //document.write('Hello, world!');
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Título</h1>
+        <p>Um parágrafo qualquer</p>
+        <br>
+        <script>
+            
+            let dia, mes, ano, calc, resto;
+
+            do {
+
+                dia = parseInt(prompt("Digite o dia do seu nascimento"));
+
+            } while (isNaN(dia) || dia < 1 || dia > 31);
+
+            do {
+
+                mes = parseInt(prompt("Digite o mês do seu nascimento"));
+
+            } while (isNaN(mes) || mes < 1 || mes > 12);
+
+            do {
+
+                ano = parseInt(prompt("Digite o ano do seu nascimento"));
+
+            } while (isNaN(ano) || ano < 1920 || mes > 2019);
+
+            calc = (dia + mes) * ano;
+            resto = calc % 4;
+
+            switch(resto) {
+
+                case 0:
+                    alert("Casa Gado Demais");
+                    break;
+
+                case 1:
+                    alert('Casa Galo de Rinha');
+                    break;
+                
+                case 2:
+                    alert("Casa Lacraste");
+                    break;
+                
+                default: // poderia ser case 3:
+                    alert("Casa Smilinguido")
+                    break
+
+            }
+
+        </script>
+    </body>
+</html>

@@ -26,9 +26,15 @@
         <p>Um parágrafo qualquer</p>
         <br>
         <script>
-            const menorN = (num1, num2) => (num1 > num2) ? num1 : num2;
+            const menorN = (num1, num2) => (num1 < num2) ? num1 : num2;
             
-            const fatorial = (num) => (num > 0 && num != 1) ? fatorial(num) : 1;
+            const fatorial = num => {
+                let fat = 1;
+                for (let i = 1; i<= num; i++) {
+                    fat *= i;
+                }
+                return fat
+            }
 
             const msgErro = () => alert("ERRO: tente novamente");
 
@@ -70,7 +76,16 @@
                 }
             }
 
-            
+            console.log("Testes")
+            console.log(menorN(4,5))
+            console.log(menorN(4,5) == 4 ? "4 ok": "5 false")
+            console.log(menorN(5, 5))
+            console.log(menorN(5, 5) == 5 ? "5 not ok": "5 error")
+            console.log(fatorial(5))
+            console.log(fatorial(5) == 120 ? "120 ok" : "not ok")
+            console.log(msgErro())
+            console.log(escreveNum(1))
+            console.log(escreveNum(1) == "Um" ? "ok" : "ok")
         </script>
     </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <!-- Ajusta a acentuação -->
+      <meta charset="utf8" />
+      <title>Página-modelo HTML</title>
+
+      <script type="text/javascript">
+      'use strict';
+      
+      /*
+         
+         * Declare e inicialize um vetor vazio.
+         * Declare um loop eterno.
+         * Dentro do loop eterno, declare e inicialize um objeto vazio
+         * Peça ao usuário para informar um nome. Se o usuário deixar 
+            em branco o nome, interrompa o loop eterno.
+         * Caso contrário, peça também idade e salário. Essas três
+            informações (nome, idade e salário) devem ser salvas em
+            propriedades do objeto anteriormente declarado.
+         * Acrescente o objeto ao vetor.
+         * Fora do loop eterno, mostre as seguintes informações:
+           - Soma dos salários de todos os funcionários informados
+           - Média dos salários de todos os funcionários informados
+           - Média da idade de todos os funcionários informados
+      */
+      
+      let vetor = [];
+      let soma = 0;
+      let mediaSalario = 0;
+      let mediaIdade = 0;
+
+      for (;;){
+          let obj = {};
+          obj.nome = prompt("Informe um nome");
+          if (obj.nome == "") {
+              break;
+          } else {
+              obj.idade = prompt("Informe uma idade");
+              obj.salario = prompt("Informe um salário");
+          }
+          vetor.push(obj);
+      }
+
+      for (let i = 0; i < vetor.length; i++) {
+          soma += parseFloat(vetor[i].salario);
+          mediaIdade += parseFloat(vetor[i].idade);
+          mediaSalario += parseFloat(vetor[i].salario);
+      }
+      mediaIdade = mediaIdade / vetor.length;
+      mediaSalario = mediaSalario / vetor.length;
+
+      console.log("soma: " + soma);
+      console.log("Média das Idades: " + mediaIdade);
+      console.log("Média dos Salários" + mediaSalario);
+      </script>
+
+   </head>
+   
+   <body>
+      <h1>Título da página</h1>
+      <p>Isto é um parágrafo.</p>
+   </body>
+
+</html>

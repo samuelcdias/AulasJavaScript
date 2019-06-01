@@ -1,5 +1,7 @@
 
 ./video-maker
+./tests
+./APIrequestcodes
 
 *.pdf
 
@@ -7,4 +9,4 @@
 
 *.txt
 
-./tests
+

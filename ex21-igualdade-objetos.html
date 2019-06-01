@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <!-- Ajusta a acentuação -->
+      <meta charset="utf8" />
+      <title>Página-modelo HTML</title>
+
+      <script type="text/javascript">
+      'use strict';
+      /*
+         
+         * Crie um objeto obj1 que representa um cão com as seguintes propriedades
+            e preencha os valores:
+            - nome
+            - raça
+            - cor
+            - sexo
+            - nome do pai (nome da propriedade com espaços)
+            - nome da mãe (nome da propriedade com espaços)
+         * Declare um segundo objeto, fazendo:
+            let obj2 = obj1;
+         * Troque os dados das propriedades de obj2.
+         * Exiba os dois objetos no console. O que aconteceu? 
+      */
+      let obj1 = {
+          nome: "Doggo",
+          raca: "Viralata",
+          cor: "Branco com manchas pretas",
+          sexo: "Macho",
+          "nome do pai": "Dogguinho",
+          "nome da mae": "Joaquinina",
+      }
+      let obj2 = Object.assign({}, obj1);
+
+      obj2.nome = "Ninão"
+      obj2.cor = "Marrom"
+      obj2.raca = "Dogue alemão"
+      obj2.sexo = "Fêmea"
+      obj2["nome do pai"] = "Missisipi"
+      obj2["nome da mae"] = "Artemis"
+
+      for (let prop in obj1) {
+          console.log(obj1[prop]);
+          console.log(obj2[prop]);
+      }
+      </script>
+
+   </head>
+   
+   <body>
+      <h1>Título da página</h1>
+      <p>Isto é um parágrafo.</p>
+   </body>
+
+</html>

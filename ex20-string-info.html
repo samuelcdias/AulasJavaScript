@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <!-- Ajusta a acentuação -->
+      <meta charset="utf8" />
+      <title>Página-modelo HTML</title>
+
+      <style>
+          
+        table {
+           /* Evita espaço entre as bordas das células */
+           border-collapse: collapse;
+           background: #ddd;
+        }
+        
+        table, td, th {
+           border: 1px solid black;
+           padding: 10px;
+        }
+        
+        .center {
+           text-align: center;
+        }
+        .direita {
+           text-align: right;
+        }
+      </style>
+
+      <script type="text/javascript">
+        'use strict'; // Modo "chato" do Javascript
+    
+        /*
+            
+            1) Solicite ao usuário que informe uma string. Essa string
+                deve conter palavras separadas entre si por espaços.
+            2) Converta a string em um vetor, utilizando split().
+            3) Para cada string no vetor, crie uma linha em uma tabela HTML
+                exibindo as seguintes informações:
+                1ª coluna: a string original
+                2ª coluna: o número de caracteres da string
+                3ª coluna: a string convertida em minúsculas
+                4ª coluna: a string convertida em maiúsculas
+            4) A tabela deve ter uma linha de cabeçalho com os valores:
+                1ª coluna: ORIGINAL
+                2ª coluna: COMPRIMENTO
+                3ª coluna: MINÚSCULAS
+                4ª coluna: MAIÚSCULAS
+            5) A tabela deve ser construída com document.write().
+        */
+         let doc;
+        document.open(doc);
+         let teste = "Omelete Temporada Mascara Churrasco"
+         let entrada = "";
+
+         function recebeString(test=false) {
+            if(!test) {
+               entrada = prompt("Insira uma lista contendo números e letras");
+            } else {
+               entrada = teste;
+            }
+            return entrada.split(" ");
+         }
+
+         function fazTabela(vetor) {
+            let docTable = "";
+
+            docTable = "<table>\n   <tr>\n        <th>ORIGINAL\n        </th>\n        <th>CUMPRIMENTO</th>\n        <th>MAIÚSCULAS</th>\n       <th> MINÚSCULAS </th>\n    </tr>\n"
+            for (let i = 0; i < vetor.length; i++) {
+               docTable = docTable.concat("    <tr>\n        <td>", vetor[i]);
+               docTable = docTable.concat("</td>\n        <td class='center'>", vetor[i].length);
+               docTable = docTable.concat("</td>\n        <td>", vetor[i].toUpperCase());
+               docTable = docTable.concat("</td>\n        <td>", vetor[i].toLowerCase());
+               docTable = docTable.concat("</td>\n    </tr>\n");
+            }
+            docTable = docTable.concat("</table>");
+            
+            document.write(docTable);
+         }
+         
+      </script>
+
+   </head>
+
+   <body>
+      <h1>Título</h1>
+      <p>Um parágrafo qualquer</p>
+      <br>
+
+      <table>
+         <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Preço</th>
+         </tr>
+         <tr>
+            <td>VW</td>
+            <td>Fusca</td>
+            <td class="direita">$ 5 000, 00</td>
+         </tr>
+         <tr>
+            <td>Fiat</td>
+            <td>Toro</td>
+            <td class="direita">$ 46 000, 00</td>
+         </tr>
+      </table>
+      <br><br>
+      <button onclick="fazTabela(recebeString(1))">Teste</button>
+      <script type=text/javascript>
+         fazTabela(recebeString(1));
+      </script>
+  </body>
+</html>

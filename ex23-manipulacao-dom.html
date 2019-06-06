@@ -70,6 +70,35 @@
          5. Altere a cor do cabeçalho para amarelo (yellow)   
       */
       
+        let cabec = document.querySelector("#cabec")
+         
+        let par = document.getElementsByTagName("p");
+        let precos = document.getElementsByClassName("alin-dir");
+        let tabela = document.querySelectorAll("table")[0];
+        let total = 0
+
+        cabec.innerText = "Tabela de preços";
+
+        for (let preco of precos) {
+            total += parseFloat(preco.innerText);
+        }
+
+        par[0].innerText = `Valor total requirido: ${total}`;
+        let median = total / precos.length;
+        par[1].innerText = `Valor médio: ${median.toFixed(2)}`;
+        
+        let linhasTab= tabela.getElementsByTagName("tr");
+        for( let i =1; i< linhasTab.length; i++) {
+            linhasTab[i].cells[0].innerText = linhasTab[i].cells[0].innerText.toUpperCase();
+        }
+        // Alternativas:
+        // linha.getElementByTagName[0];
+        // linha.children[0];
+        // linha.firstChild;
+        // linha.querySelector('td');
+
+        cabec.style.color = "yellow"
+
    </script>
 
 

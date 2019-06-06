@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <!-- Ajusta a acentuação -->
+      <meta charset="utf8" />
+      <title>Página-modelo HTML</title>
+
+      <style>
+         body{
+            background: aliceblue;
+            font: normal 16pt Consolas;
+         }
+         .centralizado {
+            text-align: center;
+         }
+         #d2{
+            background: moccasin;
+         }
+         table {
+            border-collapse: collapse;
+         }
+         td, th {
+            border: 1px solid black;
+         }
+         #cabec {
+            background: lightblue;
+         }
+         .alin-dir {
+            text-align: right;
+         }
+         div {
+            padding: 10px;
+            background: lightgreen;
+         }
+         span {
+            background: yellow;
+         }
+      </style>
+
+   </head>
+   
+   <body>
+      <h1 class="centralizado" id="cabec">Título da página</h1>
+
+      <p>Isto é um parágrafo</p>
+      <p id="p2">Isto é o segundo parágrafo.</p>
+      <p class='centralizado'>Isto é um parágrafo</p>
+
+      <div>Esta é uma divisão. E <span> isto</span> é um span.</div>
+      <div id="d2">Esta é a segunda divisão. E <span> isto</span> é um span.</div>
+      <span> Terceiro span</span>
+      <script>
+         'use strict'; 
+
+         // Selecionando todos os elementos do documento cuja
+         // tag seja h1 colocando dentro da variável cabec.
+         // getElementByTagName() sempre retorna um VETOR.
+         let cabec = document.getElementsByTagName('h1')[0];
+         console.log(document.getElementsByTagName('h1'))
+         cabec.innerText = "Aula de manipulação de DOM";
+
+         let parags = document.getElementsByTagName('p');
+         console.log(document.getElementsByTagName('p'))
+
+         // Alterando primeiro paragrafo
+         parags[0].innerText = 'innerText alterado.';
+         // Alterando o estilo do segundo parágrafo
+         parags[1].style.color = "red";
+
+         //passando o testo de todos os parágrafos para maiúsculas
+         for (let p of parags) {
+            p.innerText = p.innerText.toUpperCase();
+         }
+         //getElementById(): retorna o elemento cujo id foi passado
+         // Não pode existir mais de um elemento com o mesmo id no documento
+         let par2 = document.getElementById('p2');
+
+         par2.style.background = "white";
+
+         //getElementsByClassName() retorna todos os elementos de
+         // uma determinada classe em um VETOR
+         let centrals = document.getElementsByClassName('centralizado');
+
+         //Coloca todos os elements centralizados em verde
+         for (let c of centrals) {
+            c.style.color = "green";
+         }
+
+         let div2 = document.getElementById("d2");
+
+            // Selecionando todos os elementos soan que estão 
+            // dentro da d2
+            let spanDiv2 = div2.getElementsByTagName("span")[0];
+            spanDiv2.style.background = "orange";
+
+         // querySelecto() retorno ao PRIMEIRO elemento que
+         // coincidir com o seu parâmetro
+         let cabecalho = document.querySelector('h1');
+         cabecalho.style.color = "black";
+
+         let d2 = document.querySelector('#d2');
+         d2.style.color = "blue";
+
+         let cent = document.querySelector('.centralizado');
+         cent.innerText = "AULA DE MANIPULAÇAO DE DOM COM querySelecto()";
+
+         let spans = document.querySelectorAll('span');
+
+         for (let s of spans) {
+            s.style.font = "normal 33pt Arial ";
+         }
+
+
+      </script>
+      <table>
+         <tr>
+            <th>Item</th>
+            <th>Preço/kg</th>
+         </tr>
+         <tr>
+            <td>maçã</td>
+            <td class="alin-dir">
+               8.50
+            </td>
+         </tr>
+         <tr>
+            <td>banana</td>
+            <td class="alin-dir">
+               4.75
+            </td>
+         </tr>
+         <tr>
+            <td>pera</td>
+            <td class="alin-dir">
+               9.80
+            </td>
+         </tr>         
+      </table>
+
+   </body>
+
+   <script type="text/javascript">
+ 
+      'use strict';
+      
+      /*
+         1. Altere o texto do cabeçalho para "Tabela de preços"
+         2. Coloque no primeiro parágrafo a quantia total necessária
+            (calculada em código) para comprar 1kg de cada fruta
+         3. Coloque no segundo parágrafo o preço médio (calculado em 
+            código) das frutas
+         4. Passe o nome das frutas da primeira coluna para maiúsculas
+         5. Altere a cor do cabeçalho para amarelo (yellow)   
+      */
+      
+   </script>
+
+
+</html>
